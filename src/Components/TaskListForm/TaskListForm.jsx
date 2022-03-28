@@ -19,7 +19,7 @@ export default function TaskListForm(props) {
   return (
     <form action="Add" method="GET" onSubmit={handleSubmit}>
       <label>
-        <input type="text" name="task-name" />
+        <input type="text" maxlength="30" name="task-name" />
         <button>Add Task</button>
       </label>
     </form>

@@ -14,7 +14,7 @@ body {
   background-color: rgb(35, 35, 20);
   font-family: Arial, Helvetica, sans-serif;
   min-height: 500px;
-  width: 400px;
+  width: 500px;
   margin: 40px auto;
   padding: 0.1rem;
 }
@@ -28,7 +28,7 @@ header {
 form input {
   background-color: white;
   border: 0;
-  width: 250px;
+  width: 350px;
   height: 50px;
   padding: 0 20px;
   margin: 20px;
@@ -54,7 +54,7 @@ form button:hover {
 
 li {
   color: white;
-  width: 300px;
+  width: 400px;
   background-color: rgb(81, 83, 76);
   height: 50px;
   margin: 20px auto;
