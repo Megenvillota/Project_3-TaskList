@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  background-image: linear-gradient(120deg, #dc2fdf 0%, #68cb7a 100%);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+
+.App {
+  background-color: rgb(35, 35, 20);
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 500px;
+  width: 400px;
+  margin: 40px auto;
+  padding: 0.1rem;
+}
+
+header {
+  font-size: 1rem;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+form input {
+  background-color: white;
+  border: 0;
+  width: 250px;
+  height: 50px;
+  padding: 0 20px;
+  margin: 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  color: black;
+}
+
+form button {
+  height: 50px;
+  width: 80px;
+  border-radius: 5px;
+  border: 0;
+  background-color: rgb(162, 198, 70);
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+form button:hover {
+  background: #ff6f47;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+li {
+  color: white;
+  width: 300px;
+  background-color: rgb(81, 83, 76);
+  height: 50px;
+  margin: 20px auto;
+  border-radius: 5px;
+  list-style-type: none;
+  padding: 10px;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li button {
+  height: 30px;
+  width: 70px;
+  border-radius: 5px;
+  border: 0;
+  background-color: rgb(28, 28, 25);
+  color: white;
+  cursor: pointer;
+  font-weight: bolder;
+  position: absolute;
+  right: 10px;
 }
+
+li button:hover {
+  background: #e32bda;
+  color: white;
+}
+
+/*
+header {
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 0.1rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+}
+form button {
+  color: #ff6f47;
+  background: #f7fffe;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form button:hover {
+  background: #ff6f47;
+  color: white;
+}
+*/

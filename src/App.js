@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import TaskListForm from "./Components/TaskListForm/TaskListForm";
+import TaskList from "./Components/TaskList/TaskList";
 
-function App() {
+export default function App() {
+  const [addedTasks, setAddedTasks] = useState([]);
+  const [filteredDoslist, setFilteredDoslist] = useState([]);
+
+  const addTask = (newTask) => {
+    const newAddedTasks = [...addedTasks, newTask];
+    setAddedTasks(newAddedTasks);
+  };
+
+  const deleteTask = (id) => {
+    const newAddedTasks = addedTasks.filter(
+      (tasks) => tasks.id.toString() !== id
+    );
+    setAddedTasks(newAddedTasks);
+  };
+
+  /*const completeTask = () => {
+    setAddedTasks(
+      addedTasks.map((item) => {
+        if (item.id === addedTasks.id) {
+          return {
+            ...item,
+            completed: !item.completed,
+          };
+        }
+        return item;
+      })
+    );
+  };
+  */
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <header>
+        <TaskListForm addTask={addTask} />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <TaskList tasks={addedTasks} deleteTask={deleteTask}></TaskList>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
 }
-
-export default App;
