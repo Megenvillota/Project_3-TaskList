@@ -37,7 +37,6 @@ export default function App() {
   return (
     <div className="App">
       <header>
-        hello
         <TaskListForm addTask={addTask} />
         <p>
           <TaskList tasks={addedTasks} deleteTask={deleteTask}></TaskList>

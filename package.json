@@ -1,5 +1,5 @@
 {
-  "homepage": "http://megenvillota.github.io/Project_3-TaskList",
+  "homepage": "http://megenvillota.github.io/Project_3",
   "name": "react-todo-list-1",
   "version": "0.1.0",
   "private": true,
@@ -16,7 +16,7 @@
     "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build": "react-scripts build",
+    "build": "react-scripts build && cp build/index.html build/404.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
